@@ -68,6 +68,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${profileInstance?.test}">
+				<li class="fieldcontain">
+					<span id="test-label" class="property-label"><g:message code="profile.test.label" default="Test" /></span>
+					
+						<span class="property-value" aria-labelledby="test-label"><g:fieldValue bean="${profileInstance}" field="test"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

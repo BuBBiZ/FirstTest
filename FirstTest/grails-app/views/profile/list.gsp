@@ -34,6 +34,8 @@
 					
 						<g:sortableColumn property="site" title="${message(code: 'profile.site.label', default: 'Site')}" />
 					
+						<g:sortableColumn property="test" title="${message(code: 'profile.test.label', default: 'Test')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -49,6 +51,8 @@
 						<td>${fieldValue(bean: profileInstance, field: "number")}</td>
 					
 						<td>${fieldValue(bean: profileInstance, field: "site")}</td>
+					
+						<td>${fieldValue(bean: profileInstance, field: "test")}</td>
 					
 					</tr>
 				</g:each>

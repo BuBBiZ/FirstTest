@@ -42,3 +42,11 @@
 	<g:textField name="site" value="${profileInstance?.site}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'test', 'error')} ">
+	<label for="test">
+		<g:message code="profile.test.label" default="Test" />
+		
+	</label>
+	<g:textField name="test" value="${profileInstance?.test}"/>
+</div>
+

@@ -7,6 +7,7 @@ class Profile {
 	Integer number
 	Date begin
 	Date end
+	String test
 	
     static constraints = {
     }
