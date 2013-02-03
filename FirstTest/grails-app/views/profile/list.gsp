@@ -24,6 +24,10 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="begin" title="${message(code: 'profile.begin.label', default: 'Begin')}" />
+					
+						<g:sortableColumn property="end" title="${message(code: 'profile.end.label', default: 'End')}" />
+					
 						<g:sortableColumn property="name" title="${message(code: 'profile.name.label', default: 'Name')}" />
 					
 						<g:sortableColumn property="number" title="${message(code: 'profile.number.label', default: 'Number')}" />
@@ -36,7 +40,11 @@
 				<g:each in="${profileInstanceList}" status="i" var="profileInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${profileInstance.id}">${fieldValue(bean: profileInstance, field: "name")}</g:link></td>
+						<td><g:link action="show" id="${profileInstance.id}">${fieldValue(bean: profileInstance, field: "begin")}</g:link></td>
+					
+						<td><g:formatDate date="${profileInstance.end}" /></td>
+					
+						<td>${fieldValue(bean: profileInstance, field: "name")}</td>
 					
 						<td>${fieldValue(bean: profileInstance, field: "number")}</td>
 					

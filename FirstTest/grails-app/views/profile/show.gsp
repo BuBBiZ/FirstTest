@@ -23,6 +23,24 @@
 			</g:if>
 			<ol class="property-list profile">
 			
+				<g:if test="${profileInstance?.begin}">
+				<li class="fieldcontain">
+					<span id="begin-label" class="property-label"><g:message code="profile.begin.label" default="Begin" /></span>
+					
+						<span class="property-value" aria-labelledby="begin-label"><g:formatDate date="${profileInstance?.begin}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${profileInstance?.end}">
+				<li class="fieldcontain">
+					<span id="end-label" class="property-label"><g:message code="profile.end.label" default="End" /></span>
+					
+						<span class="property-value" aria-labelledby="end-label"><g:formatDate date="${profileInstance?.end}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${profileInstance?.name}">
 				<li class="fieldcontain">
 					<span id="name-label" class="property-label"><g:message code="profile.name.label" default="Name" /></span>

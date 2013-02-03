@@ -2,6 +2,22 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'begin', 'error')} required">
+	<label for="begin">
+		<g:message code="profile.begin.label" default="Begin" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:datePicker name="begin" precision="day"  value="${profileInstance?.begin}"  />
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'end', 'error')} required">
+	<label for="end">
+		<g:message code="profile.end.label" default="End" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:datePicker name="end" precision="day"  value="${profileInstance?.end}"  />
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'name', 'error')} ">
 	<label for="name">
 		<g:message code="profile.name.label" default="Name" />
